@@ -26,6 +26,11 @@ public class HelloWorldController {
     public String index() {
         ServiceInstance instance = client.getLocalServiceInstance();
         logger.info("into index... host:{}, service-id:{}", instance.getHost(), instance.getServiceId());
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "Hello world!(client-1)";
     }
 }

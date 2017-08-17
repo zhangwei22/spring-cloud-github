@@ -1,5 +1,6 @@
 package com.spring.cloud.github.web;
 
+import com.spring.cloud.github.service.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +19,13 @@ public class ConsumerController {
     @Autowired
     RestTemplate restTemplate;
 
+    @Autowired
+    private HelloService helloService;
+
     @RequestMapping(value = "helloConsumer", method = RequestMethod.GET)
     public String helloConsumer() {
-        return restTemplate.getForEntity("http://EUREKA-CLIENT/helloWorld/index", String.class).getBody();
+        //return restTemplate.getForEntity("http://EUREKA-CLIENT/helloWorld/index", String.class).getBody();
+        return helloService.helloService();
     }
 
 }
