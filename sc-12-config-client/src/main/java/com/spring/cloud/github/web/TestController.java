@@ -17,8 +17,13 @@ public class TestController {
     @Value("${from:spring cloud config!}")
     private String name;
 
+    @Value("${password:spring cloud config password!}")
+    private String password;
+
     @RequestMapping(value = "home", method = RequestMethod.GET)
     public String home() {
-        return "Hello " + name;
+        String tmp_one = "Hello ".concat(name);
+        String tmp_two = "\nThe remote password is: ".concat(password);
+        return tmp_one.concat(tmp_two);
     }
 }
