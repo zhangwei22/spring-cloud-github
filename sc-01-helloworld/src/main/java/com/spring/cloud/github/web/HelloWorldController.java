@@ -18,6 +18,7 @@ public class HelloWorldController {
     @ResponseBody
     public String index() {
         logger.info("into index...");
+	System.out.println("hello world!");
         return "Hello world!";
     }
 }
