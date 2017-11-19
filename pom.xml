@@ -6,45 +6,36 @@
 	<groupId>com.spring.cloud.github</groupId>
 	<artifactId>spring-cloud-github</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
+
+	<modules>
+		<module>sc-01-helloworld</module>
+		<module>sc-02-properties</module>
+		<module>sc-03-eureka-server</module>
+		<module>sc-04-eureka-client</module>
+		<module>sc-05-eureka-client-1</module>
+		<module>sc-06-ribbon-consumer</module>
+		<module>sc-07-hystrix-dashboard</module>
+		<module>sc-08-turbine</module>
+		<module>sc-09-turbine-amqp</module>
+		<module>sc-10-feign-consumer</module>
+        <module>sc-11-config-server</module>
+        <module>sc-12-config-client</module>
+	</modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.6.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
 
 </project>
